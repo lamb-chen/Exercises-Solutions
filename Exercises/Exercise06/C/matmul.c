@@ -34,7 +34,7 @@ char * kernelsource = "__kernel void mmul(                              \n" \
 "{                                                                      \n" \
 "   int k;                                                              \n" \
 "   int i = get_global_id(0);                                           \n" \
-"   int j = get_global_id(0);                                           \n" \
+"   int j = get_global_id(1);                                           \n" \
 "   float tmp = 0.0f;                                                   \n" \
 "   for (k = 0; k < N; k++) {                                           \n" \
 "       tmp += A[i*N+k]*B[k*N+j];                                       \n" \

@@ -1,19 +1,8 @@
-2 errors generated.
 
 Using OpenCL device: Tesla P100-PCIE-16GB
 
 ===== Sequential, matrix mult (dot prod), order 1024 on host CPU ======
- 2.28 seconds at 940.2 MFLOPS 
-Error: Failed to build program executable!
-CL_BUILD_PROGRAM_FAILURE
-<kernel>:14:8: error: use of undeclared identifier 'Ndim'; did you mean 'fdim'?
-   C[i*Ndim+j] += tmp;                                                 
-       ^~~~
-       fdim
-cl_kernel.h:1930:27: note: 'fdim' declared here
-double16 __OVERLOADABLE__ fdim(double16, double16); 
-                          ^
-<kernel>:14:7: error: invalid operands to binary expression ('int' and 'double16 (double16, double16)')
-   C[i*Ndim+j] += tmp;                                                 
-     ~^~~~~
+ 2.26 seconds at 952.3 MFLOPS 
 
+===== OpenCL, matrix mult, C(i,j) per work item, order 1024 ======
+ 0.03 seconds at 64586.0 MFLOPS 
