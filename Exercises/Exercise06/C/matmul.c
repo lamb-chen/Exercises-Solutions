@@ -32,6 +32,15 @@ char * kernelsource = "__kernel void mmul(                              \n" \
 "   __global float* B,                                                  \n" \
 "   __global float* C)                                                  \n" \
 "{                                                                      \n" \
+"   int k;                                                              \n" \
+"   int i = get_global_id(0);                                           \n" \
+"   int j = get_global_id(0);                                           \n" \
+"   float tmp = 0.0f;                                                   \n" \
+"   for (k = 0; k < N; k++) {                                           \n" \
+"       tmp += A[i*N+k]*B[k*N+j];                                       \n" \
+"   }                                                                   \n" \
+"   C[i*N+j] += tmp;                                                    \n" \
+"                                                                       \n" \
 "}                                                                      \n" \
 "\n";
 
@@ -162,6 +171,7 @@ int main(int argc, char *argv[])
 
     printf("\n===== OpenCL, matrix mult, C(i,j) per work item, order %d ======\n",N);
 
+    
     // Do the multiplication COUNT times
     for (int i = 0; i < COUNT; i++)
     {
