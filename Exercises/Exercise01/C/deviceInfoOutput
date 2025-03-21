@@ -1,0 +1,30 @@
+
+Number of OpenCL platforms: 1
+
+-------------------------
+Platform: NVIDIA CUDA
+Vendor: NVIDIA Corporation
+Version: OpenCL 3.0 CUDA 12.4.89
+Number of devices: 2
+	-------------------------
+		Name: Tesla P100-PCIE-16GB
+		Version: OpenCL C 1.2 
+		Max. Compute Units: 56
+		Local Memory Size: 48 KB
+		Global Memory Size: 16269 MB
+		Max Alloc Size: 4067 MB
+		Max Work-group Total Size: 1024
+		Max Work-group Dims: ( 1024 1024 64 )
+	-------------------------
+	-------------------------
+		Name: Tesla P100-PCIE-16GB
+		Version: OpenCL C 1.2 
+		Max. Compute Units: 56
+		Local Memory Size: 48 KB
+		Global Memory Size: 16269 MB
+		Max Alloc Size: 4067 MB
+		Max Work-group Total Size: 1024
+		Max Work-group Dims: ( 1024 1024 64 )
+	-------------------------
+
+-------------------------

@@ -1,0 +1,5 @@
+ 
+ Device is  Tesla P100-PCIE-16GB  GPU from  NVIDIA Corporation  with a max of 56 compute units 
+
+The kernel ran in 0.000042 seconds
+D = A+B+C:  1024 out of 1024 results were correct.
